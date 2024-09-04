@@ -74,59 +74,6 @@
             margin: auto;
         }
 
-        h2 {
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5em;
-            margin-bottom: 1em;
-            color: #2c3e50;
-        }
-
-        p {
-            margin-bottom: 1em;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #ecf0f1;
-            padding: 1em;
-            margin-bottom: 1em;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        ul li h3 {
-            margin-top: 0;
-            color: #3498db;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 1em 0;
-            text-align: center;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer .container {
-            width: 90%;
-            margin: auto;
-        }
-
         .hero {
             background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
             color: #ecf0f1;
@@ -159,6 +106,62 @@
         .cta-button:hover {
             background: #2980b9;
         }
+
+        .about-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .project-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 2em;
+        }
+
+        .about-content img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #ecf0f1;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        ul li h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .container {
+            width: 90%;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -184,9 +187,12 @@
     </section>
     
     <section id="about">
-        <div class="container">
-            <h2>Tentang Saya</h2>
-            <p>Halo! Saya [Nama Anda], seorang [profesi/pekerjaan] dengan passion di [bidang minat]. Di sini, Anda bisa mengetahui lebih banyak tentang diri saya dan pekerjaan yang saya lakukan.</p>
+        <div class="container about-content">
+            <img src="https://via.placeholder.com/600x400" alt="Foto Profil" class="about-img">
+            <div>
+                <h2>Tentang Saya</h2>
+                <p>Halo! Saya [Nama Anda], seorang [profesi/pekerjaan] dengan passion di [bidang minat]. Di sini, Anda bisa mengetahui lebih banyak tentang diri saya dan pekerjaan yang saya lakukan.</p>
+            </div>
         </div>
     </section>
     
@@ -195,10 +201,12 @@
             <h2>Proyek</h2>
             <ul>
                 <li>
+                    <img src="https://via.placeholder.com/800x400" alt="Proyek 1" class="project-img">
                     <h3>Proyek 1</h3>
                     <p>Deskripsi singkat tentang proyek 1.</p>
                 </li>
                 <li>
+                    <img src="https://via.placeholder.com/800x400" alt="Proyek 2" class="project-img">
                     <h3>Proyek 2</h3>
                     <p>Deskripsi singkat tentang proyek 2.</p>
                 </li>
