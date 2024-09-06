@@ -1,235 +1,171 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nama Anda - Website Pribadi</title>
+    <title>Interactive Black and White Theme</title>
     <style>
-        /* Reset dasar */
-        body, h1, h2, h3, p, ul, li {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Gaya umum */
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a;
+            transition: background-color 0.1s ease;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* Animasi Fade In untuk container */
+        .container {
+            text-align: center;
+            background: #f5f5f5; /* Warna latar belakang yang lebih terang */
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow lebih terang */
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeIn 1s ease forwards;
+            color: #333; /* Warna teks lebih gelap untuk kontras */
+        }
+
+        /* Animasi Fade In */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
             color: #333;
-            background-color: #f4f4f4;
-            padding: 0;
-            margin: 0;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
-        header {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 1em 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+        p {
+            margin-top: 10px;
+            color: #555;
+            font-size: 1.1rem;
         }
 
-        header .container {
-            width: 90%;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 15px;
-        }
-
-        nav ul li a {
-            color: #ecf0f1;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 0.5em 1em;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background-color: #34495e;
-        }
-
-        section {
-            padding: 6em 0;
-            background: #fff;
-        }
-
-        section .container {
+        /* Animasi Input Fields */
+        input {
+            padding: 10px;
+            margin: 10px 0;
             width: 80%;
-            margin: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #fff;
+            color: #333;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .hero {
-            background: url('https://via.placeholder.com/1920x500') no-repeat center center/cover;
-            color: #ecf0f1;
-            padding: 5em 0;
-            text-align: center;
+        input:focus {
+            border: 1px solid #333;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            outline: none;
         }
 
-        .hero h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            margin-top: 0.5em;
-        }
-
-        .cta-button {
-            background: #3498db;
-            color: #ecf0f1;
-            padding: 0.5em 1.5em;
+        /* Tombol dengan animasi hover dan bounce */
+        button {
+            padding: 12px 25px;
+            background-color: #333;
+            color: white;
             border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1em;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        .cta-button:hover {
-            background: #2980b9;
+        button:hover {
+            background-color: #555;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
         }
 
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 2em;
+        button:active {
+            transform: scale(0.95);
+            animation: bounce 0.3s ease;
         }
 
-        .about-content img {
-            width: 50%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        /* Bounce animation untuk tombol */
+        @keyframes bounce {
+            0% { transform: scale(0.95); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
-        .about-img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-size: 1rem;
+            opacity: 0;
+            animation: showError 0.5s ease forwards;
         }
 
-        .project-img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #ecf0f1;
-            padding: 1em;
-            margin-bottom: 1em;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        ul li h3 {
-            margin-top: 0;
-            color: #3498db;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 1em 0;
-            text-align: center;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer .container {
-            width: 90%;
-            margin: auto;
+        /* Animasi muncul untuk pesan error */
+        @keyframes showError {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Selamat datang di Website Pribadi [Nama Anda]</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Tentang Saya</a></li>
-                    <li><a href="#projects">Proyek</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h1>Halo, saya [Nama Anda]</h1>
-            <p>Selamat datang di situs pribadi saya! Temukan lebih lanjut tentang karya dan proyek saya.</p>
-            <a href="#about" class="cta-button">Pelajari Lebih Lanjut</a>
-        </div>
-    </section>
-    
-    <section id="about">
-        <div class="container about-content">
-            <img src="https://via.placeholder.com/600x400" alt="Foto Profil" class="about-img">
-            <div>
-                <h2>Tentang Saya</h2>
-                <p>Halo! Saya [Nama Anda], seorang [profesi/pekerjaan] dengan passion di [bidang minat]. Di sini, Anda bisa mengetahui lebih banyak tentang diri saya dan pekerjaan yang saya lakukan.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <div class="container">
-            <h2>Proyek</h2>
-            <ul>
-                <li>
-                    <img src="https://via.placeholder.com/800x400" alt="Proyek 1" class="project-img">
-                    <h3>Proyek 1</h3>
-                    <p>Deskripsi singkat tentang proyek 1.</p>
-                </li>
-                <li>
-                    <img src="https://via.placeholder.com/800x400" alt="Proyek 2" class="project-img">
-                    <h3>Proyek 2</h3>
-                    <p>Deskripsi singkat tentang proyek 2.</p>
-                </li>
-                <!-- Tambahkan proyek lainnya di sini -->
-            </ul>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <div class="container">
-            <h2>Kontak</h2>
-            <p>Anda bisa menghubungi saya melalui email di <a href="mailto:email@domain.com">email@domain.com</a>.</p>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 [Nama Anda]. Semua hak cipta dilindungi.</p>
-        </div>
-    </footer>
+    <div class="container">
+        <h1>Login</h1>
+        <p>Please enter your credentials to access the blog</p>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" /> <br>
+        <button onclick="login()">Login</button>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengubah warna background sesuai posisi kursor
+        document.body.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            // Warna hitam, abu-abu
+            const r = Math.floor(x * 40); // Kombinasi warna abu gelap
+            const g = Math.floor(y * 40);
+            const b = Math.floor((1 - x) * 40);
+
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        });
+
+        // Fungsi login sederhana
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            //===============================================//
+            //||= YAHH NAMANYA JUGA WEBSITE GABUT WKWKWK  =||//
+            //||= SELAMAT ANDA BERHASIL MENJADI HACKER :v =||//
+            //===============================================//
+            // Check if username and password match
+            if (username === "admin" && password === "1234") {
+                // Redirect to blog page if login is successful
+                window.location.href = 'https://yourpersonalblog.com'; 
+            } else {
+                // Show error message if login fails
+                errorMessage.textContent = "Invalid username or password. Please try again.";
+            }
+        }
+    </script>
 </body>
 </html>
