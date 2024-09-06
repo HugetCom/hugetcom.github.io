@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Tuan</title>
+    <title>Interactive Black and White Theme</title>
     <style>
         * {
             margin: 0;
@@ -28,13 +28,15 @@
         .container {
             text-align: center;
             background: #f5f5f5; /* Warna latar belakang yang lebih terang */
-            padding: 30px;
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow lebih terang */
             opacity: 0;
             transform: translateY(-50px);
             animation: fadeIn 1s ease forwards;
             color: #333; /* Warna teks lebih gelap untuk kontras */
+            max-width: 400px;
+            width: 90%;
         }
 
         /* Animasi Fade In */
@@ -47,21 +49,21 @@
 
         h1 {
             color: #333;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
         p {
             margin-top: 10px;
             color: #555;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         /* Animasi Input Fields */
         input {
             padding: 10px;
             margin: 10px 0;
-            width: 80%;
+            width: 100%;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
@@ -78,7 +80,7 @@
 
         /* Tombol dengan animasi hover dan bounce */
         button {
-            padding: 12px 25px;
+            padding: 12px 20px;
             background-color: #333;
             color: white;
             border: none;
@@ -121,6 +123,26 @@
                 opacity: 1;
             }
         }
+
+        /* Media Queries untuk responsivitas */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            button {
+                padding: 10px 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,7 +150,7 @@
         <h1>Login</h1>
         <p>Please enter your credentials to access the blog</p>
         <input type="text" id="username" placeholder="Username" />
-        <input type="password" id="password" placeholder="Password" /> <br>
+        <input type="password" id="password" placeholder="Password" />
         <button onclick="login()">Login</button>
         <div id="error-message" class="error"></div>
     </div>
@@ -153,10 +175,6 @@
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('error-message');
 
-            //===============================================//
-            //||= YAHH NAMANYA JUGA WEBSITE GABUT WKWKWK  =||//
-            //||= SELAMAT ANDA BERHASIL MENJADI HACKER :v =||//
-            //===============================================//
             // Check if username and password match
             if (username === "admin" && password === "1234") {
                 // Redirect to blog page if login is successful
