@@ -567,6 +567,28 @@
 <script src="js/images-loaded.min.js"></script>
 <script src="js/lightbox.min.js"></script>
 <script src="js/site.js"></script>
+<script>
+  document.addEventListener("keydown", function (event) {
+    if (event.key == "F12") {
+      event.preventDefault(); // Mencegah F12 membuka DevTools
+    }
+  });
+</script>
+<script>
+  document.addEventListener("contextmenu", function (event) {
+    event.preventDefault(); // Mencegah klik kanan
+  });
+</script>
+<script>
+  document.addEventListener("keydown", function (event) {
+    // Mencegah Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    if ((event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) || (event.ctrlKey && event.key === 'U')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
 
 
 </body>
