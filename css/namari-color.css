@@ -168,6 +168,11 @@ body {
     line-height:60px;
     font-weight:800;
     color:#111;
+    text-shadow: 
+    1px 1px 0 #e7e7e5, /* Offset 1px di kanan bawah dengan warna outline */
+    -1px -1px 0 #e7e7e5, /* Offset 1px di kiri atas dengan warna outline */
+    1px -1px 0 #e7e7e5, /* Offset 1px di kanan atas dengan warna outline */
+    -1px 1px 0 #e7e7e5; /* Offset 1px di kiri bawah dengan warna outline */
 }
 
 #banner h2 {
@@ -175,6 +180,11 @@ body {
     font-size:18px;
     font-weight:300;
     color:#111;
+    text-shadow: 
+    1px 1px 0 #e7e7e5, /* Offset 1px di kanan bawah dengan warna outline */
+    -1px -1px 0 #e7e7e5, /* Offset 1px di kiri atas dengan warna outline */
+    1px -1px 0 #e7e7e5, /* Offset 1px di kanan atas dengan warna outline */
+    -1px 1px 0 #e7e7e5; /* Offset 1px di kiri bawah dengan warna outline */
 }
 
 
