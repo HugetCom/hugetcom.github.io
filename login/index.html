@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--Page Title-->
+    <title>Namari - Free Landing Page Template</title>
+
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" title="Favicon"/>
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Namari Color CSS -->
+    <link rel="stylesheet" href="css/namari-color.css">
+
+    <!--Icon Fonts - Font Awesome Icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Animate CSS-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--Google Webfonts-->
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #444;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: calc(33.333% - 20px);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .service-box p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .service-box {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .service-box {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status" class="la-ball-triangle-path">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<!--End of Preloader-->
+
+<div class="page-border" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <div class="top-border wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"></div>
+    <div class="right-border wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;"></div>
+    <div class="bottom-border wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;"></div>
+    <div class="left-border wow fadeInLeft animated" style="visibility: visible; animation-name: fadeInLeft;"></div>
+</div>
+
+<div id="wrapper">
+
+    <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
+        <div id="header" class="nav-collapse">
+            <div class="row clearfix">
+                <div class="col-1">
+
+                    <!--Logo-->
+                    <div id="logo">
+
+                        <!--Logo that is shown on the banner-->
+                        <img src="images/logo.png" id="banner-logo" alt="Landing Page"/>
+                        <!--End of Banner Logo-->
+
+                        <!--The Logo that is shown on the sticky Navigation Bar-->
+                        <img src="images/logo-2.png" id="navigation-logo" alt="Landing Page"/>
+                        <!--End of Navigation Logo-->
+
+                    </div>
+                    <!--End of Logo-->
+
+                    <!--Main Navigation-->
+                    <nav id="nav-main">
+                        <ul>
+                            <li>
+                                <a href="#banner">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">Link</a>
+                            </li>
+                           
+                        </ul>
+                    </nav>
+                    <!--End of Main Navigation-->
+
+                    <div id="nav-trigger"><span></span></div>
+                    <nav id="nav-mobile"></nav>
+
+                </div>
+            </div>
+        </div><!--End of Header-->
+
+        <!--Banner Content-->
+        <div id="banner-content" class="row clearfix">
+
+            <div class="col-38">
+
+                <div class="section-heading">
+                    <h1>Hey there, fellow explorer!</h1>
+                    <h2>Hey there! I made this blog just to kill some time, so don’t expect anything too serious here. It’s basically a mashup of things I’m into—like my hobbies, music, and movies.</h2>
+                </div>
+
+                <!--Call to Action-->
+                <a href="#" class="button">START CREATING TODAY</a>
+                <!--End Call to Action-->
+
+            </div>
+
+        </div><!--End of Row-->
+    </header>
+
+    <!--Main Content Area-->
+    <main id="content">
+
+    <section id="about" class="introduction scrollto">   
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="services">
+            <div class="service-box">
+                <h3>Service 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 2</h3>
+                <p>Cras suscipit quam et turpis eleifend vitae malesuada magna congue.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 3</h3>
+                <p>Proin vel tortor sem. Nulla facilisi. Etiam scelerisque vel dolor vel aliquam.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 4</h3>
+                <p>Morbi non libero eget urna fermentum vehicula et at est.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 5</h3>
+                <p>Pellentesque ullamcorper, quam a molestie suscipit, augue purus gravida quam, ac faucibus elit dolor vitae ligula.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 6</h3>
+                <p>Nunc fermentum ligula eget erat malesuada, sit amet iaculis erat condimentum.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 8</h3>
+                <p>Cras suscipit quam et turpis eleifend vitae malesuada magna congue.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 9</h3>
+                <p>Proin vel tortor sem. Nulla facilisi. Etiam scelerisque vel dolor vel aliquam.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 10</h3>
+                <p>Morbi non libero eget urna fermentum vehicula et at est.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 11</h3>
+                <p>Pellentesque ullamcorper, quam a molestie suscipit, augue purus gravida quam, ac faucibus elit dolor vitae ligula.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 12</h3>
+                <p>Nunc fermentum ligula eget erat malesuada, sit amet iaculis erat condimentum.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 13</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 14</h3>
+                <p>Cras suscipit quam et turpis eleifend vitae malesuada magna congue.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 15</h3>
+                <p>Proin vel tortor sem. Nulla facilisi. Etiam scelerisque vel dolor vel aliquam.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 16</h3>
+                <p>Morbi non libero eget urna fermentum vehicula et at est.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 17</h3>
+                <p>Pellentesque ullamcorper, quam a molestie suscipit, augue purus gravida quam, ac faucibus elit dolor vitae ligula.</p>
+            </div>
+            <div class="service-box">
+                <h3>Service 18</h3>
+                <p>Nunc fermentum ligula eget erat malesuada, sit amet iaculis erat condimentum.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    </main>
+    <!--End Main Content Area-->
+
+
+    <!--Footer-->
+    <footer id="landing-footer" class="clearfix">
+        <div class="row clearfix">
+
+            <p id="copyright" class="col-2">Made with love by <a href="https://www.shapingrain.com">ShapingRain</a></p>
+
+            <!--Social Icons in Footer-->
+            <ul class="col-2 social-icons">
+                <li>
+                    <a target="_blank" title="Facebook" href="https://www.facebook.com/username">
+                        <i class="fa fa-facebook fa-1x"></i><span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Google+" href="http://google.com/+username">
+                        <i class="fa fa-google-plus fa-1x"></i><span>Google+</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Twitter" href="http://www.twitter.com/username">
+                        <i class="fa fa-twitter fa-1x"></i><span>Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="Instagram" href="http://www.instagram.com/username">
+                        <i class="fa fa-instagram fa-1x"></i><span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" title="behance" href="http://www.behance.net">
+                        <i class="fa fa-behance fa-1x"></i><span>Behance</span>
+                    </a>
+                </li>
+            </ul>
+            <!--End of Social Icons in Footer-->
+        </div>
+    </footer>
+    <!--End of Footer-->
+
+</div>
+
+<!-- Include JavaScript resources -->
+<script src="js/jquery.1.8.3.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/featherlight.min.js"></script>
+<script src="js/featherlight.gallery.min.js"></script>
+<script src="js/jquery.enllax.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.stickyNavbar.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/images-loaded.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/site.js"></script>
+
+
+</body>
+</html>
